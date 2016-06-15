@@ -1,17 +1,21 @@
-
 <p>
-  <strong>User name:</strong>
-  <%= @comment.user_name %>
+<% if user_signed_in? %>
+  <%= image_tag current_user.gravatar_url %>
+<% end %>     
+</p>
+<p>
+<strong>User name:</strong>
+<%= @comment.user_name %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @comment.body %>
+<strong>Body:</strong>
+<%= @comment.body %>
 </p>
 
 <p>
-  <strong>Idea:</strong>
-  <%= @comment.idea_id %>
+<strong>Idea:</strong>
+<%= @comment.idea_id %>
 </p>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
