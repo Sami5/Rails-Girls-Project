@@ -11,6 +11,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+gem "nav_lynx"
 gem 'devise'
 gem 'gravtastic'
 gem 'carrierwave'
